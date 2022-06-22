@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: "${NAME}-app"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100M"
+        max-file: "2"
+    restart: no
+    ports:
+      - "0.0.0.0:80:80"
+    networks:
+      - app
+
+networks:
+  app:

@@ -1,0 +1,36 @@
+{
+  "name": "flomni-api-refactoring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha --timeout 10000 -r ts-node/register 'src/tests/**/*.ts'",
+    "build": "tsc --build",
+    "clean": "rm -rf build/*"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "express": "^4.18.1",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "nats": "^2.7.1",
+    "passport": "^0.6.0",
+    "passport-unique-token": "^3.0.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.3.0",
+    "typedi": "^0.10.0",
+    "typescript": "^4.3.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bunyan": "^1.8.8",
+    "@types/lodash": "^4.14.182",
+    "@types/mocha": "^9.1.1",
+    "@types/passport": "^1.0.9",
+    "@types/passport-unique-token": "^1.0.4",
+    "@types/sinon": "^10.0.11",
+    "bunyan-prettystream": "^0.1.3",
+    "mocha": "^9.2.2"
+  }
+}
