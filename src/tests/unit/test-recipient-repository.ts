@@ -138,14 +138,13 @@ describe('RecipientRepository', function () {
         })
     })
 
-    //
-    // describe('deleteItem', () => {
-    //     it('should return true if item deleted', async () => {
-    //         const repository = Container.get(RecipientRepository)
-    //         const result = await repository.deleteItem("uid-2", "1")
-    //         assert.equal(result == true, true)
-    //     })
-    // })
+    describe('deleteItem', () => {
+        it('should return true if item deleted', async () => {
+            const repository = Container.get(RecipientRepository)
+            const result = await repository.deleteItem("good-uid", "1")
+            assert.equal(result == true, true)
+        })
+    })
 
 
 });
