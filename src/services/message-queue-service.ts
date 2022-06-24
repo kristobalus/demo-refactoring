@@ -1,9 +1,13 @@
 
 
+export interface NatLikeService {
+    request(path: string, data: any): Promise<any>
+}
+
 export class MessageQueueService {
 
     constructor(
-        private nats
+        private nats: NatLikeService
     ) {
     }
 

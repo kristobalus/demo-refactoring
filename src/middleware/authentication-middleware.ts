@@ -1,8 +1,6 @@
 import passport = require('passport');
 import { UniqueTokenStrategy } from 'passport-unique-token'
-import { MessageQueueService } from "../services/message-queue-service";
 import { CompanyRepository } from "../repositories/company-repository";
-import { Func } from "mocha";
 
 export class AuthenticationMiddleware {
 
